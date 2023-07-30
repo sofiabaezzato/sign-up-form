@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/223092cf53.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"> 
+    <title>Sign-up - Greatbooks</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="img-container"></div>
+            <div class="sign-up-container">
+                <div class="title-container">
+                    <h1>Greatbooks</h1>
+                    <h3>Discover the books you will love.</h3>
+                </div>
+                <form action="" class="sign-up-form">
+                    <div class="form-row">
+                        <label for="full-name">Name</label>
+                        <input id="full-name" name="full-name" type="text" placeholder="Harry Potter">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="harrypotter@hogwarts.com">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="000 123 456 78">
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" placeholder="8 characters minimum" minlength="8" autocomplete="new-password">
+                    </div>
+                    <div class="form-row">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input id="confirm-password" name="confirm-password" type="password" placeholder="8 characters minimum" minlength="8" autocomplete="new-password">
+                    </div>
+                    <div class="form-row-btn">
+                        <button class="submit-button">Sign-up</button>
+                        <div class="login-line">
+                            <p>Already have an account?</p><a href="#" class="login">Log in</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>sofiabaezzato
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+        </p>
+        <a href="https://github.com/sofiabaezzato" class="copy" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
+</body>
+</html>

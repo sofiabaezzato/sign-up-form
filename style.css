@@ -1,0 +1,237 @@
+/* ======== BASE ======== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    overflow: visible;
+}
+
+body {
+
+    background-color: var(--first-color);
+    font-family: var(--body-font);
+    color: var(--neutral-color);
+
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ======== COLORS & FONTS ======== */
+:root {
+    --first-color: #1b2327;
+    --second-color: #d3c8b4;
+    --neutral-color: #f7f1e5;
+    --body-font: 'Montserrat', sans-serif;
+    --big-font-size: 4rem;
+    --normal-font-size: 1.3rem;
+    --small-font-size: .9rem;
+    --font-regular: 400;
+    --font-medium: 600;
+    --font-bold: 800;
+}
+
+/* ======================================================== */
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    min-height: 100vh;
+    justify-content: flex-start;
+    gap: 10%;
+}
+    
+.img-container {
+    flex: 50%;
+    background-image: url('./background.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+}
+
+.sign-up-container {
+    flex: 40%;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: var(--big-font-size);
+    font-weight: var(--font-bold);
+}
+
+.sign-up-form {
+    max-width: 80%;
+    margin: 3rem 0 2rem 0;
+}
+
+.form-row {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'],
+.form-row input[type='tel'],
+.form-row input[type='password'] {
+    background-color: #1b2327;
+    border: 2px solid #6e7274;
+    color: var(--neutral-color);
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-row label {
+    margin-bottom: 15px;
+}
+
+.form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid,
+.form-row input[type='tel']:invalid,
+.form-row input[type='password']:invalid {
+    border: 2px solid #e73636;
+    color: var(--neutral-color);
+    box-shadow: none;
+}
+
+.form-row-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.submit-button {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    background-color: var(--first-color);
+    color: var(--neutral-color);
+    border: 2px solid var(--neutral-color);
+    border-radius: 6px;
+    padding: 10px 30px;
+
+}
+
+.submit-button:hover {
+    background-color: var(--neutral-color);
+    color: var(--first-color);
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.submit-button:active {
+    scale: 0.85;
+    transition: 0.3s;
+}
+
+.login-line {
+    display: flex;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.login {
+    font-weight: 600;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 50px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.fa-github {
+    font-size: 18px;
+    color: var(--text-color);
+    transition: transform 0.5s;
+    align-items: center;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg);
+}
+
+
+@media (max-width: 800px) {
+    .img-container,
+    .sign-up-container {
+        flex: 90%;
+        justify-items: center;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .title-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .form-row-btn {
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
