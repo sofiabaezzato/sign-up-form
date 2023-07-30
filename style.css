@@ -79,7 +79,7 @@ img {
 
 .sign-up-container {
     flex: 40%;
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
