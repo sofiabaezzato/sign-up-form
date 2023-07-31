@@ -44,7 +44,7 @@ img {
 :root {
     --first-color: #1b2327;
     --second-color: #d3c8b4;
-    --neutral-color: #f7f1e5;
+    --neutral-color: #fcf9f5;
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 4rem;
     --normal-font-size: 1.3rem;
@@ -109,6 +109,20 @@ h1 {
 
 }
 
+.form-row label {
+    font-weight: var(--font-medium);
+}
+
+.input-hint {
+    font-size: .7rem;
+}
+
+#message {
+    margin: 6px 0;
+    color: #e73636;
+    font-weight: var(--font-medium);
+}
+
 .form-row input[type='text'],
 .form-row input[type='email'],
 .form-row input[type='tel'],
@@ -119,21 +133,37 @@ h1 {
     border-radius: 3px;
     width: 100%;
     padding: 7px;
+    margin-top: 6px;
     font-size: 14px;
 }
 
-.form-row label {
-    margin-bottom: 15px;
-    font-weight: var(--font-medium);
-}
-
-.form-row input[type='text']:invalid,
-.form-row input[type='email']:invalid,
-.form-row input[type='tel']:invalid,
-.form-row input[type='password']:invalid {
+.form-row input[type='text']:not(:placeholder-shown):invalid,
+.form-row input[type='email']:not(:placeholder-shown):invalid,
+.form-row input[type='tel']:not(:placeholder-shown):invalid,
+.form-row input[type='password']:not(:placeholder-shown):invalid {
     border: 2px solid #e73636;
     color: var(--neutral-color);
     box-shadow: none;
+}
+
+/* change autocomplete style in chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    font-family: var(--body-font);
+    font-size: 14px;
+    border: 2px solid #6e7274;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--neutral-color) !important;
+    -webkit-box-shadow: none;
+    transition: background-color 5000s ease-in-out 0s;
+  
 }
 
 .form-row-btn {
@@ -147,18 +177,18 @@ h1 {
 .submit-button {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    background-color: var(--first-color);
-    color: var(--neutral-color);
-    border: 2px solid var(--neutral-color);
+    background-color: var(--neutral-color);
+    color: var(--first-color);
+    border: 2px solid transparent;
     border-radius: 6px;
     padding: 10px 30px;
 
 }
 
 .submit-button:hover {
-    background-color: var(--neutral-color);
-    color: var(--first-color);
-    border: 2px solid transparent;
+    background-color: var(--first-color);
+    color: var(--neutral-color);
+    border: 2px solid var(--neutral-color);
     transition: 0.3s;
 }
 
